@@ -1030,6 +1030,9 @@ services:
     depends_on:
       - api
       - web
+    networks:
+      - ssrf_proxy_network
+      - default
 
   # The Weaviate vector store.
   weaviate:
